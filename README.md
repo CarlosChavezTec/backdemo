@@ -32,3 +32,8 @@ Se genera automáticamente un archivo `users.db`.
 
 ## Debug
 Incluye configuración `.vscode/launch.json` para debuggear desde VS Code.
+
+npm install -g @railway/cli
+railway login --browserless
+railway link
+git add .railway/project.json
