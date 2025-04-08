@@ -27,11 +27,7 @@ jobs:
       - name: Instalar Railway CLI
         run: npm install -g @railway/cli
 
-      - name: Autenticarse con Railway
-        run: railway login --token ${{ secrets.RAILWAY_TOKEN }}
-
-      - name: Link al proyecto
-        run: railway link --environment production
-
       - name: Desplegar a Railway
         run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
