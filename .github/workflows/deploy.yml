@@ -27,6 +27,9 @@ jobs:
       - name: Instalar Railway CLI
         run: npm install -g @railway/cli
 
+      - name: Link al proyecto manualmente
+        run: railway link --project 77bcb8f9-946c-4583-bf02-597944f296c1 --environment 29aa1634-32e5-4db1-9326-558f3a699ecf
+
       - name: Desplegar a Railway
         run: railway up
         env:
