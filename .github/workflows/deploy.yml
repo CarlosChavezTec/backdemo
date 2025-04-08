@@ -31,6 +31,6 @@ jobs:
         run: ls -la && cat .railway/project.json
 
       - name: Desplegar a Railway
-        run: railway up --cwd .
+        run: railway up .
         env:
           RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
