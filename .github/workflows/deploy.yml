@@ -27,7 +27,10 @@ jobs:
       - name: Instalar Railway CLI
         run: npm install -g @railway/cli
 
+      - name: Verifica ubicación
+        run: ls -la && cat .railway/project.json
+
       - name: Desplegar a Railway
-        run: railway up
+        run: railway up --cwd .
         env:
           RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
